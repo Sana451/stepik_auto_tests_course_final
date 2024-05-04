@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as chrome_opts
-from selenium.webdriver.firefox.options import Options as firefox_opts
+from selenium.webdriver.chrome.options import Options as chromeOpts
+from selenium.webdriver.firefox.options import Options as firefoxOpts
 
 
 def pytest_addoption(parser):
@@ -10,18 +10,18 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture
-def browser(request):
+def browser(request) -> webdriver.Chrome:
     browser_name = request.config.getoption("browser_name")
     language = request.config.getoption("language")
     browser = None
 
     if browser_name == "chrome":
-        options = chrome_opts()
+        options = chromeOpts()
         options.add_experimental_option('prefs', {'intl.accept_languages': language})
         browser = webdriver.Chrome(options=options)
 
     elif browser_name == "firefox":
-        fp = firefox_opts()
+        fp = firefoxOpts()
         fp.set_preference("intl.accept_languages", language)
         browser = webdriver.Firefox(options=fp)
 
