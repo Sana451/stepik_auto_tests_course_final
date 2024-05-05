@@ -14,5 +14,5 @@ class BasketPageLocators:
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main p[class='price_color']")
     ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, "button[value='Добавить в корзину']")
-    SUCCESS_ALERTS = (By.CLASS_NAME, "alert-success")
+    SUCCESS_ALERTS = (By.CSS_SELECTOR, ".alert-success strong")
     ALERT_INFO_BASKET_COUNT = (By.CLASS_NAME, "alert-info")
