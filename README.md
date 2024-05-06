@@ -1,7 +1,7 @@
 # stepik_auto_tests_course_final
 
 Мощный курс по автоматизации тестирования с использованием Pytest + Selenium от stepik
-(https://stepik.org/lesson/199980/step/6?auth=login&unit=174035).
+[ссылка на курс: ](https://stepik.org/course/575/syllabus)
 
 В курсе также рассматриваются такие темы, как:
 
